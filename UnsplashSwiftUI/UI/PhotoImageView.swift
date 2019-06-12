@@ -13,15 +13,15 @@ struct PhotoImageView : View {
   
   @ObjectBinding var photoLoader: PhotoLoader
   
-  init(router: NetworkRouter, producer: URLProducer) {
-    photoLoader = PhotoLoader(router: router, producer: producer)
+  init(producer: URLProducer) {
+    photoLoader = PhotoLoader(router: DependencyContainer.networkRouter, producer: producer)
   }
   
   var body: some View {
     Image(uiImage: UIImage(data: self.photoLoader.data) ?? .init())
       .resizable()
       .cornerRadius(5)
-      .frame(height: 200)
+      .frame(height: 300)
   }
 }
 
@@ -29,8 +29,8 @@ struct ProfileImageView : View {
   
   @ObjectBinding var photoLoader: PhotoLoader
   
-  init(router: NetworkRouter, producer: URLProducer) {
-    photoLoader = PhotoLoader(router: router, producer: producer)
+  init(producer: URLProducer) {
+    photoLoader = PhotoLoader(router: DependencyContainer.networkRouter, producer: producer)
   }
   
   var body: some View {
@@ -48,8 +48,9 @@ struct UserImageView : View {
   
   @ObjectBinding var photoLoader: PhotoLoader
   
-  init(router: NetworkRouter, producer: URLProducer) {
-    photoLoader = PhotoLoader(router: router, producer: producer)
+  init(producer: URLProducer) {
+    
+    photoLoader = PhotoLoader(router: DependencyContainer.networkRouter, producer: producer)
   }
   
   var body: some View {
@@ -59,4 +60,10 @@ struct UserImageView : View {
       .clipShape(Circle())
       .frame(width: 100, height: 100)
   }
+}
+
+struct DependencyContainer {
+  
+  static let networkRouter = Router()
+  
 }

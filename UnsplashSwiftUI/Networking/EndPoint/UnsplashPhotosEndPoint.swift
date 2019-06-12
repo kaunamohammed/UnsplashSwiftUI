@@ -8,22 +8,11 @@
 
 import Foundation
 
-public struct UnsplashPhotosEndPoint: RESTComponent {
+public struct UnsplashPhotosEndPoint: AllCompasing {
 
   public let path: String = "/photos"
-  private let queryItems: [URLQueryItem]
+  public let queryItems: [URLQueryItem]
   
-}
-
-extension UnsplashPhotosEndPoint: URLProducer {
-  public var url: URL? {
-    var components = URLComponents()
-    components.scheme = scheme
-    components.host = host
-    components.path = path
-    components.queryItems = queryItems
-    return components.url
-  }
 }
 
 public extension UnsplashPhotosEndPoint {

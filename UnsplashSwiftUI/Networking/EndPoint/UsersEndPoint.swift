@@ -8,22 +8,11 @@
 
 import Foundation
 
-public struct UsersEndPoint: RESTComponent {
+public struct UsersEndPoint: AllCompasing {
   
   public let path: String = "/search/users"
-  private let queryItems: [URLQueryItem]
+  public let queryItems: [URLQueryItem]
   
-}
-
-extension UsersEndPoint: URLProducer {
-  public var url: URL? {
-    var components = URLComponents()
-    components.scheme = scheme
-    components.host = host
-    components.path = path
-    components.queryItems = queryItems
-    return components.url
-  }
 }
 
 public extension UsersEndPoint {

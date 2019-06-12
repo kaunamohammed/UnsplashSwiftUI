@@ -8,18 +8,6 @@
 
 import Foundation
 
-// MARK: - SearchResponse
-struct SearchResponse: Decodable {
-  let total, totalPages: Int
-  let results: [User]
-  
-  enum CodingKeys: String, CodingKey {
-    case total
-    case totalPages
-    case results
-  }
-}
-
 // MARK: - User
 struct User: Decodable {
   let id: String

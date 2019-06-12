@@ -1,8 +1,8 @@
 //
 //  Photo.swift
-//  ExperimentProject
+//  UnsplashSwiftUI
 //
-//  Created by Kauna Mohammed on 11/06/2019.
+//  Created by Kauna Mohammed on 12/06/2019.
 //  Copyright © 2019 Kauna Mohammed. All rights reserved.
 //
 
@@ -52,24 +52,24 @@ struct Links: Decodable {
 }
 
 // MARK: - SponsoredBy
-struct SponsoredBy: Decodable { 
-  let id: String? 
-  let updatedAt: String? 
-  let username: String? 
-  let name: String? 
-  let firstName: String? 
-  let lastName: String? 
-  let twitterUsername: String? 
-  let portfolioURL: String? 
-  let bio: String? 
-  let location: String? 
-  let links: SponsoredByLinks? 
-  let profileImage: ProfileImage? 
-  let instagramUsername: String? 
-  let totalCollections: Int? 
-  let totalLikes: Int? 
-  let totalPhotos: Int? 
-  let acceptedTos: Bool? 
+struct SponsoredBy: Decodable {
+  let id: String?
+  let updatedAt: String?
+  let username: String?
+  let name: String?
+  let firstName: String?
+  let lastName: String?
+  let twitterUsername: String?
+  let portfolioURL: String?
+  let bio: String?
+  let location: String?
+  let links: SponsoredByLinks?
+  let profileImage: ProfileImage?
+  let instagramUsername: String?
+  let totalCollections: Int?
+  let totalLikes: Int?
+  let totalPhotos: Int?
+  let acceptedTos: Bool?
   
   enum CodingKeys: String, CodingKey {
     case id

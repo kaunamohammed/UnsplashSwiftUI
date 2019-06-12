@@ -1,6 +1,6 @@
 //
-//  PhotoListViewModel.swift
-//  ExperimentProject
+//  UserListViewModel.swift
+//  UnsplashSwiftUI
 //
 //  Created by Kauna Mohammed on 12/06/2019.
 //  Copyright © 2019 Kauna Mohammed. All rights reserved.
@@ -9,11 +9,11 @@
 import Combine
 import SwiftUI
 
-public class PhotoListViewModel: BindableObject {
+public class UserListViewModel: BindableObject {
   
-  public let didChange = PassthroughSubject<PhotoListViewModel, Never>()
+  public let didChange = PassthroughSubject<UserListViewModel, Never>()
   
-  var photos = [PhotoViewModel]() {
+  var users = [UserViewModel]() {
     didSet {
       didChange.send(self)
     }
@@ -22,25 +22,25 @@ public class PhotoListViewModel: BindableObject {
   private let router: NetworkRouter
   init(router: NetworkRouter) {
     self.router = router
-    getPhotos()
+    getUsers()
   }
   
-  private func getPhotos() {
-
-    router.request(UnsplashPhotosEndPoint.getPhotos(page: 1,
-                                                    numberPerPage: 50,
-                                                    orderedBy: .popular),
+  private func getUsers() {
+    
+    router.request(UsersEndPoint.getUsers(matching: "s",
+                                          page: 1,
+                                          numberPerPage: 20),
                    completion: { result in
                     
                     switch result {
                       
                     case .success(let data):
-
+                      
                       do {
                         
-                        let photos: [Photo] = try data.decoded()
+                        let response: SearchResponse<User> = try data.decoded()
                         
-                        self.photos = photos.map(PhotoViewModel.init)
+                        self.users = response.results.map(UserViewModel.init)
                       } catch let error {
                         print("error: \(error)")
                       }

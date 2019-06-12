@@ -1,5 +1,5 @@
 //
-//  UserListViewModel.swift
+//  PhotoListViewModel.swift
 //  UnsplashSwiftUI
 //
 //  Created by Kauna Mohammed on 12/06/2019.
@@ -9,11 +9,11 @@
 import Combine
 import SwiftUI
 
-public class UserListViewModel: BindableObject {
+public class PhotoListViewModel: BindableObject {
   
-  public let didChange = PassthroughSubject<UserListViewModel, Never>()
+  public let didChange = PassthroughSubject<PhotoListViewModel, Never>()
   
-  var users = [UserViewModel]() {
+  var photos = [PhotoViewModel]() {
     didSet {
       didChange.send(self)
     }
@@ -22,14 +22,14 @@ public class UserListViewModel: BindableObject {
   private let router: NetworkRouter
   init(router: NetworkRouter) {
     self.router = router
-    getUsers()
+    getPhotos()
   }
   
-  private func getUsers() {
+  private func getPhotos() {
     
-    router.request(UsersEndPoint.getUsers(matching: "sophia",
-                                          page: 1,
-                                          numberPerPage: 10),
+    router.request(UnsplashPhotosEndPoint.getPhotos(page: 1,
+                                                    numberPerPage: 50,
+                                                    orderedBy: .popular),
                    completion: { result in
                     
                     switch result {
@@ -38,9 +38,9 @@ public class UserListViewModel: BindableObject {
                       
                       do {
                         
-                        let response: SearchResponse = try data.decoded()
+                        let photos: [Photo] = try data.decoded()
                         
-                        self.users = response.results.map(UserViewModel.init)
+                        self.photos = photos.map(PhotoViewModel.init)
                       } catch let error {
                         print("error: \(error)")
                       }

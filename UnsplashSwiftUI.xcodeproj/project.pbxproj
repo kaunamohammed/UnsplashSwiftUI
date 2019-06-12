@@ -12,10 +12,8 @@
 		FC2A868022B1301700120498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2A867F22B1301700120498 /* Assets.xcassets */; };
 		FC2A868322B1301700120498 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2A868222B1301700120498 /* Preview Assets.xcassets */; };
 		FC2A868622B1301700120498 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2A868422B1301700120498 /* LaunchScreen.storyboard */; };
-		FC2A869C22B1310400120498 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A868E22B1310300120498 /* PhotoListViewModel.swift */; };
 		FC2A869D22B1310400120498 /* PhotoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A868F22B1310300120498 /* PhotoListRow.swift */; };
 		FC2A869F22B1310400120498 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869122B1310300120498 /* PhotoViewModel.swift */; };
-		FC2A86A022B1310400120498 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869422B1310400120498 /* Photo.swift */; };
 		FC2A86A122B1310400120498 /* RESTComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869622B1310400120498 /* RESTComponent.swift */; };
 		FC2A86A222B1310400120498 /* URLProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869722B1310400120498 /* URLProducer.swift */; };
 		FC2A86A322B1310400120498 /* UnsplashPhotosEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869822B1310400120498 /* UnsplashPhotosEndPoint.swift */; };
@@ -23,11 +21,16 @@
 		FC2A86A522B1310400120498 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869B22B1310400120498 /* Router.swift */; };
 		FC2A86A722B13F8000120498 /* PhotoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A86A622B13F8000120498 /* PhotoLoader.swift */; };
 		FC2A86AA22B1423700120498 /* PhotoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A86A922B1423700120498 /* PhotoImageView.swift */; };
-		FC352DF922B18DD100B924CD /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352DF822B18DD100B924CD /* Users.swift */; };
+		FC352DF922B18DD100B924CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352DF822B18DD100B924CD /* User.swift */; };
 		FC352DFB22B18FD200B924CD /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352DFA22B18FD200B924CD /* UserViewModel.swift */; };
 		FC352DFD22B190C300B924CD /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352DFC22B190C300B924CD /* UserListViewModel.swift */; };
 		FC352DFF22B1929D00B924CD /* UsersEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352DFE22B1929D00B924CD /* UsersEndPoint.swift */; };
-		FC352E0122B19CBF00B924CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352E0022B19CBF00B924CD /* HomeView.swift */; };
+		FC352E0322B19D2500B924CD /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352E0222B19D2500B924CD /* SearchResponse.swift */; };
+		FC352E0522B19D6000B924CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352E0422B19D6000B924CD /* HomeView.swift */; };
+		FC352E0922B19F4400B924CD /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352E0822B19F4400B924CD /* PhotoListViewModel.swift */; };
+		FC352E0D22B1A1A200B924CD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352E0C22B1A1A200B924CD /* Photo.swift */; };
+		FCE941EF22B1B9090070112B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE941EE22B1B9090070112B /* UserView.swift */; };
+		FCE941F122B1B9C60070112B /* PhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE941F022B1B9C50070112B /* PhotoListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +41,8 @@
 		FC2A868222B1301700120498 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FC2A868522B1301700120498 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC2A868722B1301700120498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC2A868E22B1310300120498 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
 		FC2A868F22B1310300120498 /* PhotoListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListRow.swift; sourceTree = "<group>"; };
 		FC2A869122B1310300120498 /* PhotoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
-		FC2A869422B1310400120498 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FC2A869622B1310400120498 /* RESTComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTComponent.swift; sourceTree = "<group>"; };
 		FC2A869722B1310400120498 /* URLProducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLProducer.swift; sourceTree = "<group>"; };
 		FC2A869822B1310400120498 /* UnsplashPhotosEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsplashPhotosEndPoint.swift; sourceTree = "<group>"; };
@@ -49,11 +50,16 @@
 		FC2A869B22B1310400120498 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC2A86A622B13F8000120498 /* PhotoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoader.swift; sourceTree = "<group>"; };
 		FC2A86A922B1423700120498 /* PhotoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImageView.swift; sourceTree = "<group>"; };
-		FC352DF822B18DD100B924CD /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		FC352DF822B18DD100B924CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FC352DFA22B18FD200B924CD /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		FC352DFC22B190C300B924CD /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		FC352DFE22B1929D00B924CD /* UsersEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersEndPoint.swift; sourceTree = "<group>"; };
-		FC352E0022B19CBF00B924CD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FC352E0222B19D2500B924CD /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		FC352E0422B19D6000B924CD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FC352E0822B19F4400B924CD /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		FC352E0C22B1A1A200B924CD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		FCE941EE22B1B9090070112B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		FCE941F022B1B9C50070112B /* PhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,8 @@
 			children = (
 				FC2A867922B1300800120498 /* AppDelegate.swift */,
 				FC2A867B22B1300800120498 /* SceneDelegate.swift */,
+				FC352E0622B19D9A00B924CD /* UI */,
+				FC352DF722B18C9000B924CD /* User */,
 				FC2A868D22B1310300120498 /* Photo */,
 				FC2A869222B1310400120498 /* Networking */,
 				FC2A867F22B1301700120498 /* Assets.xcassets */,
@@ -109,11 +117,9 @@
 		FC2A868D22B1310300120498 /* Photo */ = {
 			isa = PBXGroup;
 			children = (
-				FC352DF722B18C9000B924CD /* TrendingUsers */,
-				FC2A869322B1310400120498 /* Models */,
-				FC2A86A822B141DA00120498 /* Views */,
-				FC4AE6D322B157BB006DB164 /* ViewModels */,
-				FC2A86A622B13F8000120498 /* PhotoLoader.swift */,
+				FC352E0C22B1A1A200B924CD /* Photo.swift */,
+				FC2A869122B1310300120498 /* PhotoViewModel.swift */,
+				FC352E0822B19F4400B924CD /* PhotoListViewModel.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -121,25 +127,19 @@
 		FC2A869222B1310400120498 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				FC2A869622B1310400120498 /* RESTComponent.swift */,
+				FC2A869722B1310400120498 /* URLProducer.swift */,
+				FC2A86A622B13F8000120498 /* PhotoLoader.swift */,
 				FC2A869522B1310400120498 /* EndPoint */,
 				FC2A869922B1310400120498 /* Service */,
+				FC352E0222B19D2500B924CD /* SearchResponse.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		FC2A869322B1310400120498 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FC2A869422B1310400120498 /* Photo.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		FC2A869522B1310400120498 /* EndPoint */ = {
 			isa = PBXGroup;
 			children = (
-				FC2A869622B1310400120498 /* RESTComponent.swift */,
-				FC2A869722B1310400120498 /* URLProducer.swift */,
 				FC2A869822B1310400120498 /* UnsplashPhotosEndPoint.swift */,
 				FC352DFE22B1929D00B924CD /* UsersEndPoint.swift */,
 			);
@@ -155,33 +155,26 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		FC2A86A822B141DA00120498 /* Views */ = {
+		FC352DF722B18C9000B924CD /* User */ = {
 			isa = PBXGroup;
 			children = (
-				FC352E0022B19CBF00B924CD /* HomeView.swift */,
-				FC2A86A922B1423700120498 /* PhotoImageView.swift */,
-				FC2A868F22B1310300120498 /* PhotoListRow.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		FC352DF722B18C9000B924CD /* TrendingUsers */ = {
-			isa = PBXGroup;
-			children = (
-				FC352DF822B18DD100B924CD /* Users.swift */,
+				FC352DF822B18DD100B924CD /* User.swift */,
 				FC352DFA22B18FD200B924CD /* UserViewModel.swift */,
 				FC352DFC22B190C300B924CD /* UserListViewModel.swift */,
 			);
-			path = TrendingUsers;
+			path = User;
 			sourceTree = "<group>";
 		};
-		FC4AE6D322B157BB006DB164 /* ViewModels */ = {
+		FC352E0622B19D9A00B924CD /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				FC2A869122B1310300120498 /* PhotoViewModel.swift */,
-				FC2A868E22B1310300120498 /* PhotoListViewModel.swift */,
+				FC352E0422B19D6000B924CD /* HomeView.swift */,
+				FCE941EE22B1B9090070112B /* UserView.swift */,
+				FCE941F022B1B9C50070112B /* PhotoListView.swift */,
+				FC2A86A922B1423700120498 /* PhotoImageView.swift */,
+				FC2A868F22B1310300120498 /* PhotoListRow.swift */,
 			);
-			path = ViewModels;
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,24 +248,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC2A86A022B1310400120498 /* Photo.swift in Sources */,
+				FC352E0322B19D2500B924CD /* SearchResponse.swift in Sources */,
 				FC2A86A222B1310400120498 /* URLProducer.swift in Sources */,
 				FC2A86A122B1310400120498 /* RESTComponent.swift in Sources */,
 				FC2A86AA22B1423700120498 /* PhotoImageView.swift in Sources */,
+				FC352E0D22B1A1A200B924CD /* Photo.swift in Sources */,
 				FC2A869D22B1310400120498 /* PhotoListRow.swift in Sources */,
-				FC352E0122B19CBF00B924CD /* HomeView.swift in Sources */,
 				FC2A86A322B1310400120498 /* UnsplashPhotosEndPoint.swift in Sources */,
+				FCE941EF22B1B9090070112B /* UserView.swift in Sources */,
 				FC352DFD22B190C300B924CD /* UserListViewModel.swift in Sources */,
 				FC2A86A422B1310400120498 /* NetworkRouter.swift in Sources */,
-				FC352DF922B18DD100B924CD /* Users.swift in Sources */,
+				FC352DF922B18DD100B924CD /* User.swift in Sources */,
 				FC352DFF22B1929D00B924CD /* UsersEndPoint.swift in Sources */,
 				FC2A867A22B1300800120498 /* AppDelegate.swift in Sources */,
 				FC352DFB22B18FD200B924CD /* UserViewModel.swift in Sources */,
 				FC2A869F22B1310400120498 /* PhotoViewModel.swift in Sources */,
-				FC2A869C22B1310400120498 /* PhotoListViewModel.swift in Sources */,
 				FC2A86A722B13F8000120498 /* PhotoLoader.swift in Sources */,
 				FC2A867C22B1300800120498 /* SceneDelegate.swift in Sources */,
+				FCE941F122B1B9C60070112B /* PhotoListView.swift in Sources */,
+				FC352E0922B19F4400B924CD /* PhotoListViewModel.swift in Sources */,
 				FC2A86A522B1310400120498 /* Router.swift in Sources */,
+				FC352E0522B19D6000B924CD /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

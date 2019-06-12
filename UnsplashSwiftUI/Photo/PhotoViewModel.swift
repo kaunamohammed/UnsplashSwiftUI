@@ -40,6 +40,15 @@ public class PhotoViewModel: Identifiable {
     return photo.user?.profileImage?.small
   }
   
+  private let formatter = RelativeDateTimeFormatter()
+  private let times = [1000, 5444, 10, 0, 4999, 2000]
+  
+  var relativeDate: String {
+//    let dateFormatter = DateFormatter()
+//    guard let date = dateFormatter.date(from: photo.createdAt) else { return "No date" }
+    return formatter.localizedString(for: Date(), relativeTo: Date().addingTimeInterval(TimeInterval(photo.likes)))
+  }
+  
   private let photo: Photo
   init(photo: Photo) {
     self.photo = photo

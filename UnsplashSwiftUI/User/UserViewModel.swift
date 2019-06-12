@@ -23,7 +23,11 @@ public class UserViewModel: Identifiable {
   }
   
   var regularImageURL: URL? {
-    return user.profileImage?.medium
+    return user.profileImage?.large
+  }
+  
+  var instagramName: String {
+    return user.instagramUsername.orEmpty
   }
   
   private let user: User

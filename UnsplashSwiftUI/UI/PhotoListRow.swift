@@ -12,27 +12,35 @@ struct PhotoListRow : View {
   
   public var photoViewModel: PhotoViewModel
   
+  private let random = Bool.random()
+  
   var body: some View {
     VStack(alignment: .leading) {
       HStack {
-        ProfileImageView(router: Router(), producer: UnsplashImage(url: photoViewModel.profileImageURL))
+        ProfileImageView(producer: UnsplashImage(url: photoViewModel.profileImageURL))
         Text(photoViewModel.firstname + " " + photoViewModel.lastname)
           .font(.headline)
           .bold()
           .color(.black)
       }
       Spacer()
-      PhotoImageView(router: Router(), producer: UnsplashImage(url: photoViewModel.regularImageURL))
+      PhotoImageView(producer: UnsplashImage(url: photoViewModel.regularImageURL))
       Spacer()
-      HStack {
-        Image(systemName: photoViewModel.likedBuUser ? "heart.fill" : "heart")
+      VStack(alignment: .leading) {
+        HStack {
+        Image(systemName: random ? "heart.fill" : "heart")
           .resizable()
-          .frame(width: 20, height: 20)
-          .foregroundColor(photoViewModel.likedBuUser ? .red : .black)
+          .frame(width: 25, height: 25)
+          .foregroundColor(random ? .red : .black)
         Text(photoViewModel.totalLikes.stringValue)
+          .font(.subheadline)
+          .bold()
+          .color(random ? .red : .black)
+        }
+        Text(photoViewModel.relativeDate)
           .font(.footnote)
           .bold()
-          .color(photoViewModel.likedBuUser ? .red : .black)
+          .color(.gray)
       }
     }
   }
