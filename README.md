@@ -12,3 +12,4 @@ A simple app powered by SwiftUI and Unsplash
 
 ## License
 
+UnsplashSwiftUI is under MIT license. See the [LICENSE](LICENSE) file for more info.
