@@ -9,6 +9,7 @@ A simple app powered by SwiftUI and Unsplash
 
 * Xcode 11 Beta
 * Swift 5.1
+* Unsplash API Key
 
 ## License
 
