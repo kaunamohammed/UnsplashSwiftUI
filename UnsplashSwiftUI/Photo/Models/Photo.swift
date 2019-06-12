@@ -13,17 +13,17 @@ struct Photo: Decodable {
   let id: String
   let createdAt, updatedAt: String
   let width, height: Int
-  let color : String? = nil
-  let altDescription: String? = nil
+  let color : String?
+  let altDescription: String?
   let urls: Urls
-  let links: Links? = nil
+  let links: Links?
   let sponsored: Bool
-  var sponsoredBy: SponsoredBy? = nil
-  let sponsoredImpressionsID: String? = nil
+  var sponsoredBy: SponsoredBy?
+  let sponsoredImpressionsID: String?
   let likes: Int
   let likedByUser: Bool
   let user: SponsoredBy?
-  let sponsorship: Sponsorship? = nil
+  let sponsorship: Sponsorship?
   
   enum CodingKeys: String, CodingKey {
     case id

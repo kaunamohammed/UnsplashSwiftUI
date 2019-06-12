@@ -39,7 +39,7 @@ public extension UnsplashPhotosEndPoint {
                         orderedBy: OrderType) -> UnsplashPhotosEndPoint {
     return UnsplashPhotosEndPoint(
       queryItems: [
-        URLQueryItem(name: "client_id", value: "Your Unsplash API Key"),
+        URLQueryItem(name: "client_id", value: "8e41deb3157736312ddd28a9f78230139e95e616523493a04d67f1390730f74f"),
         URLQueryItem(name: "page", value: page.stringValue),
         URLQueryItem(name: "per_page", value: numberPerPage.stringValue),
         URLQueryItem(name: "order_by", value: orderedBy.rawValue)
