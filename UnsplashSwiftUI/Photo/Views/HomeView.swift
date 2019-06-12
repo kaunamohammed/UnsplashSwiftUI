@@ -13,6 +13,8 @@ struct HomeView : View {
   @ObjectBinding var photoListViewModel: PhotoListViewModel
   @ObjectBinding var userListViewModel: UserListViewModel
   
+  var strings = ["wow", "hello", "world"]
+  
   var body: some View {
     NavigationView {
       List {
@@ -23,17 +25,12 @@ struct HomeView : View {
           ScrollView(showsHorizontalIndicator: false) {
             VStack(alignment: .leading) {
               HStack {
-                ForEach(self.userListViewModel.users) { user in
-                  VStack {
-                    UserImageView(router: Router(), producer: UnsplashImage(url: user.regularImageURL))
-                    Text(user.firstname)
-                      .font(.subheadline)
-                      .bold()
-                  }
+                ForEach(self.userListViewModel.users.identified(by: \.id)) { user in
+                  Text(user.firstname)
                 }
               }
             }
-            }.frame(height: 140).padding(.leading, -20).padding(.trailing, -20)
+            }.frame(height: 100)
         }
         
         VStack(alignment: .leading) {
@@ -44,7 +41,7 @@ struct HomeView : View {
             PhotoListRow(photoViewModel: photoViewModel)
           }
         }
-        }.navigationBarTitle(Text("Good Evening"))
+        }.navigationBarTitle(Text("Latest Photos"))
     }
   }
 }

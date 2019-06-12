@@ -14,7 +14,6 @@
 		FC2A868622B1301700120498 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2A868422B1301700120498 /* LaunchScreen.storyboard */; };
 		FC2A869C22B1310400120498 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A868E22B1310300120498 /* PhotoListViewModel.swift */; };
 		FC2A869D22B1310400120498 /* PhotoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A868F22B1310300120498 /* PhotoListRow.swift */; };
-		FC2A869E22B1310400120498 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869022B1310300120498 /* HomeView.swift */; };
 		FC2A869F22B1310400120498 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869122B1310300120498 /* PhotoViewModel.swift */; };
 		FC2A86A022B1310400120498 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869422B1310400120498 /* Photo.swift */; };
 		FC2A86A122B1310400120498 /* RESTComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869622B1310400120498 /* RESTComponent.swift */; };
@@ -28,6 +27,7 @@
 		FC352DFB22B18FD200B924CD /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352DFA22B18FD200B924CD /* UserViewModel.swift */; };
 		FC352DFD22B190C300B924CD /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352DFC22B190C300B924CD /* UserListViewModel.swift */; };
 		FC352DFF22B1929D00B924CD /* UsersEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352DFE22B1929D00B924CD /* UsersEndPoint.swift */; };
+		FC352E0122B19CBF00B924CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352E0022B19CBF00B924CD /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,6 @@
 		FC2A868722B1301700120498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2A868E22B1310300120498 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
 		FC2A868F22B1310300120498 /* PhotoListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListRow.swift; sourceTree = "<group>"; };
-		FC2A869022B1310300120498 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FC2A869122B1310300120498 /* PhotoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		FC2A869422B1310400120498 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FC2A869622B1310400120498 /* RESTComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTComponent.swift; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		FC352DFA22B18FD200B924CD /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		FC352DFC22B190C300B924CD /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		FC352DFE22B1929D00B924CD /* UsersEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersEndPoint.swift; sourceTree = "<group>"; };
+		FC352E0022B19CBF00B924CD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,7 @@
 		FC2A86A822B141DA00120498 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FC2A869022B1310300120498 /* HomeView.swift */,
+				FC352E0022B19CBF00B924CD /* HomeView.swift */,
 				FC2A86A922B1423700120498 /* PhotoImageView.swift */,
 				FC2A868F22B1310300120498 /* PhotoListRow.swift */,
 			);
@@ -260,6 +260,7 @@
 				FC2A86A122B1310400120498 /* RESTComponent.swift in Sources */,
 				FC2A86AA22B1423700120498 /* PhotoImageView.swift in Sources */,
 				FC2A869D22B1310400120498 /* PhotoListRow.swift in Sources */,
+				FC352E0122B19CBF00B924CD /* HomeView.swift in Sources */,
 				FC2A86A322B1310400120498 /* UnsplashPhotosEndPoint.swift in Sources */,
 				FC352DFD22B190C300B924CD /* UserListViewModel.swift in Sources */,
 				FC2A86A422B1310400120498 /* NetworkRouter.swift in Sources */,
@@ -271,7 +272,6 @@
 				FC2A869C22B1310400120498 /* PhotoListViewModel.swift in Sources */,
 				FC2A86A722B13F8000120498 /* PhotoLoader.swift in Sources */,
 				FC2A867C22B1300800120498 /* SceneDelegate.swift in Sources */,
-				FC2A869E22B1310400120498 /* HomeView.swift in Sources */,
 				FC2A86A522B1310400120498 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
