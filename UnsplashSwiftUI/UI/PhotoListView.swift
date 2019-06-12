@@ -24,11 +24,3 @@ struct PhotoListView : View {
   }  
 }
 
-
-//#if DEBUG
-//struct PhotoListView_Previews : PreviewProvider {
-//    static var previews: some View {
-//        PhotoListView()
-//    }
-//}
-//#endif
