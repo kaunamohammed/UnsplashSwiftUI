@@ -9,21 +9,43 @@
 /* Begin PBXBuildFile section */
 		FC2A867A22B1300800120498 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A867922B1300800120498 /* AppDelegate.swift */; };
 		FC2A867C22B1300800120498 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A867B22B1300800120498 /* SceneDelegate.swift */; };
-		FC2A867E22B1300800120498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A867D22B1300800120498 /* ContentView.swift */; };
 		FC2A868022B1301700120498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2A867F22B1301700120498 /* Assets.xcassets */; };
 		FC2A868322B1301700120498 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2A868222B1301700120498 /* Preview Assets.xcassets */; };
 		FC2A868622B1301700120498 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2A868422B1301700120498 /* LaunchScreen.storyboard */; };
+		FC2A869C22B1310400120498 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A868E22B1310300120498 /* PhotoListViewModel.swift */; };
+		FC2A869D22B1310400120498 /* PhotoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A868F22B1310300120498 /* PhotoListRow.swift */; };
+		FC2A869E22B1310400120498 /* PhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869022B1310300120498 /* PhotoListView.swift */; };
+		FC2A869F22B1310400120498 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869122B1310300120498 /* PhotoViewModel.swift */; };
+		FC2A86A022B1310400120498 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869422B1310400120498 /* Photo.swift */; };
+		FC2A86A122B1310400120498 /* RESTComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869622B1310400120498 /* RESTComponent.swift */; };
+		FC2A86A222B1310400120498 /* URLProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869722B1310400120498 /* URLProducer.swift */; };
+		FC2A86A322B1310400120498 /* UnsplashPhotosEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869822B1310400120498 /* UnsplashPhotosEndPoint.swift */; };
+		FC2A86A422B1310400120498 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869A22B1310400120498 /* NetworkRouter.swift */; };
+		FC2A86A522B1310400120498 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869B22B1310400120498 /* Router.swift */; };
+		FC2A86A722B13F8000120498 /* PhotoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A86A622B13F8000120498 /* PhotoLoader.swift */; };
+		FC2A86AA22B1423700120498 /* PhotoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A86A922B1423700120498 /* PhotoImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC2A867622B1300800120498 /* UnsplashSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2A867922B1300800120498 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC2A867B22B1300800120498 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC2A867D22B1300800120498 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC2A867F22B1301700120498 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC2A868222B1301700120498 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FC2A868522B1301700120498 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC2A868722B1301700120498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC2A868E22B1310300120498 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		FC2A868F22B1310300120498 /* PhotoListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListRow.swift; sourceTree = "<group>"; };
+		FC2A869022B1310300120498 /* PhotoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListView.swift; sourceTree = "<group>"; };
+		FC2A869122B1310300120498 /* PhotoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		FC2A869422B1310400120498 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		FC2A869622B1310400120498 /* RESTComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTComponent.swift; sourceTree = "<group>"; };
+		FC2A869722B1310400120498 /* URLProducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLProducer.swift; sourceTree = "<group>"; };
+		FC2A869822B1310400120498 /* UnsplashPhotosEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsplashPhotosEndPoint.swift; sourceTree = "<group>"; };
+		FC2A869A22B1310400120498 /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		FC2A869B22B1310400120498 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FC2A86A622B13F8000120498 /* PhotoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoader.swift; sourceTree = "<group>"; };
+		FC2A86A922B1423700120498 /* PhotoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +80,8 @@
 			children = (
 				FC2A867922B1300800120498 /* AppDelegate.swift */,
 				FC2A867B22B1300800120498 /* SceneDelegate.swift */,
-				FC2A867D22B1300800120498 /* ContentView.swift */,
+				FC2A868D22B1310300120498 /* Photo */,
+				FC2A869222B1310400120498 /* Networking */,
 				FC2A867F22B1301700120498 /* Assets.xcassets */,
 				FC2A868422B1301700120498 /* LaunchScreen.storyboard */,
 				FC2A868722B1301700120498 /* Info.plist */,
@@ -73,6 +96,72 @@
 				FC2A868222B1301700120498 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FC2A868D22B1310300120498 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				FC2A869322B1310400120498 /* Models */,
+				FC2A86A822B141DA00120498 /* Views */,
+				FC4AE6D322B157BB006DB164 /* ViewModels */,
+				FC2A86A622B13F8000120498 /* PhotoLoader.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		FC2A869222B1310400120498 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FC2A869522B1310400120498 /* EndPoint */,
+				FC2A869922B1310400120498 /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FC2A869322B1310400120498 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC2A869422B1310400120498 /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC2A869522B1310400120498 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				FC2A869622B1310400120498 /* RESTComponent.swift */,
+				FC2A869722B1310400120498 /* URLProducer.swift */,
+				FC2A869822B1310400120498 /* UnsplashPhotosEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		FC2A869922B1310400120498 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FC2A869A22B1310400120498 /* NetworkRouter.swift */,
+				FC2A869B22B1310400120498 /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FC2A86A822B141DA00120498 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC2A869022B1310300120498 /* PhotoListView.swift */,
+				FC2A86A922B1423700120498 /* PhotoImageView.swift */,
+				FC2A868F22B1310300120498 /* PhotoListRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC4AE6D322B157BB006DB164 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FC2A869122B1310300120498 /* PhotoViewModel.swift */,
+				FC2A868E22B1310300120498 /* PhotoListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +235,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2A86A022B1310400120498 /* Photo.swift in Sources */,
+				FC2A86A222B1310400120498 /* URLProducer.swift in Sources */,
+				FC2A86A122B1310400120498 /* RESTComponent.swift in Sources */,
+				FC2A86AA22B1423700120498 /* PhotoImageView.swift in Sources */,
+				FC2A869D22B1310400120498 /* PhotoListRow.swift in Sources */,
+				FC2A86A322B1310400120498 /* UnsplashPhotosEndPoint.swift in Sources */,
+				FC2A86A422B1310400120498 /* NetworkRouter.swift in Sources */,
 				FC2A867A22B1300800120498 /* AppDelegate.swift in Sources */,
+				FC2A869F22B1310400120498 /* PhotoViewModel.swift in Sources */,
+				FC2A869C22B1310400120498 /* PhotoListViewModel.swift in Sources */,
+				FC2A86A722B13F8000120498 /* PhotoLoader.swift in Sources */,
 				FC2A867C22B1300800120498 /* SceneDelegate.swift in Sources */,
-				FC2A867E22B1300800120498 /* ContentView.swift in Sources */,
+				FC2A869E22B1310400120498 /* PhotoListView.swift in Sources */,
+				FC2A86A522B1310400120498 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
