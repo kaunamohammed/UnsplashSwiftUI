@@ -19,7 +19,6 @@
 		FC2A86A322B1310400120498 /* UnsplashPhotosEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869822B1310400120498 /* UnsplashPhotosEndPoint.swift */; };
 		FC2A86A422B1310400120498 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869A22B1310400120498 /* NetworkRouter.swift */; };
 		FC2A86A522B1310400120498 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A869B22B1310400120498 /* Router.swift */; };
-		FC2A86A722B13F8000120498 /* PhotoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A86A622B13F8000120498 /* PhotoLoader.swift */; };
 		FC2A86AA22B1423700120498 /* PhotoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A86A922B1423700120498 /* PhotoImageView.swift */; };
 		FC352DF922B18DD100B924CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352DF822B18DD100B924CD /* User.swift */; };
 		FC352DFB22B18FD200B924CD /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352DFA22B18FD200B924CD /* UserViewModel.swift */; };
@@ -31,6 +30,7 @@
 		FC352E0D22B1A1A200B924CD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352E0C22B1A1A200B924CD /* Photo.swift */; };
 		FCE941EF22B1B9090070112B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE941EE22B1B9090070112B /* UserView.swift */; };
 		FCE941F122B1B9C60070112B /* PhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE941F022B1B9C50070112B /* PhotoListView.swift */; };
+		FCE941F322B269E30070112B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE941F222B269E30070112B /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +48,6 @@
 		FC2A869822B1310400120498 /* UnsplashPhotosEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsplashPhotosEndPoint.swift; sourceTree = "<group>"; };
 		FC2A869A22B1310400120498 /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		FC2A869B22B1310400120498 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		FC2A86A622B13F8000120498 /* PhotoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoader.swift; sourceTree = "<group>"; };
 		FC2A86A922B1423700120498 /* PhotoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImageView.swift; sourceTree = "<group>"; };
 		FC352DF822B18DD100B924CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FC352DFA22B18FD200B924CD /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		FC352E0C22B1A1A200B924CD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FCE941EE22B1B9090070112B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		FCE941F022B1B9C50070112B /* PhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListView.swift; sourceTree = "<group>"; };
+		FCE941F222B269E30070112B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 			children = (
 				FC2A869622B1310400120498 /* RESTComponent.swift */,
 				FC2A869722B1310400120498 /* URLProducer.swift */,
-				FC2A86A622B13F8000120498 /* PhotoLoader.swift */,
+				FCE941F222B269E30070112B /* ImageLoader.swift */,
 				FC2A869522B1310400120498 /* EndPoint */,
 				FC2A869922B1310400120498 /* Service */,
 				FC352E0222B19D2500B924CD /* SearchResponse.swift */,
@@ -263,7 +263,7 @@
 				FC2A867A22B1300800120498 /* AppDelegate.swift in Sources */,
 				FC352DFB22B18FD200B924CD /* UserViewModel.swift in Sources */,
 				FC2A869F22B1310400120498 /* PhotoViewModel.swift in Sources */,
-				FC2A86A722B13F8000120498 /* PhotoLoader.swift in Sources */,
+				FCE941F322B269E30070112B /* ImageLoader.swift in Sources */,
 				FC2A867C22B1300800120498 /* SceneDelegate.swift in Sources */,
 				FCE941F122B1B9C60070112B /* PhotoListView.swift in Sources */,
 				FC352E0922B19F4400B924CD /* PhotoListViewModel.swift in Sources */,

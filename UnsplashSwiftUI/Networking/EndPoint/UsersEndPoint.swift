@@ -22,7 +22,7 @@ public extension UsersEndPoint {
                        numberPerPage: Int) -> UsersEndPoint {
     return UsersEndPoint(
       queryItems: [
-        URLQueryItem(name: "client_id", value: "Your Unsplash API Key"),
+        URLQueryItem(name: "client_id", value: GlobalConstants.Unsplash.apiKey),
         URLQueryItem(name: "query", value: query),
         URLQueryItem(name: "page", value: page.stringValue),
         URLQueryItem(name: "per_page", value: numberPerPage.stringValue),

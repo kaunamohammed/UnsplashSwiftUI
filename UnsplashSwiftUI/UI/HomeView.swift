@@ -18,7 +18,7 @@ struct HomeView : View {
       List {
         UserView(userListViewModel: userListViewModel)
         PhotoListView(photoListViewModel: photoListViewModel)
-        }.navigationBarTitle(Text("Good Evening"))
+        }.navigationBarTitle(Text("Good Afternoon"))
     }
   }
 }

@@ -11,14 +11,14 @@ import SwiftUI
 
 struct PhotoImageView : View {
   
-  @ObjectBinding var photoLoader: PhotoLoader
+  @ObjectBinding var imageLoader: ImageLoader
   
   init(producer: URLProducer) {
-    photoLoader = PhotoLoader(router: DependencyContainer.networkRouter, producer: producer)
+    imageLoader = ImageLoader(producer: producer)
   }
   
   var body: some View {
-    Image(uiImage: UIImage(data: self.photoLoader.data) ?? .init())
+    Image(uiImage: imageLoader.image)
       .resizable()
       .cornerRadius(5)
       .frame(height: 300)
@@ -27,14 +27,14 @@ struct PhotoImageView : View {
 
 struct ProfileImageView : View {
   
-  @ObjectBinding var photoLoader: PhotoLoader
+  @ObjectBinding var imageLoader: ImageLoader
   
   init(producer: URLProducer) {
-    photoLoader = PhotoLoader(router: DependencyContainer.networkRouter, producer: producer)
+    imageLoader = ImageLoader(producer: producer)
   }
   
   var body: some View {
-    Image(uiImage: (photoLoader.data.count == 0) ? UIImage() : UIImage(data: photoLoader.data)! )
+    Image(uiImage: imageLoader.image)
       .resizable()
       .foregroundColor(.gray)
       .clipShape(Circle())
@@ -45,16 +45,15 @@ struct ProfileImageView : View {
 
 
 struct UserImageView : View {
-  
-  @ObjectBinding var photoLoader: PhotoLoader
+
+  @ObjectBinding var imageLoader: ImageLoader
   
   init(producer: URLProducer) {
-    
-    photoLoader = PhotoLoader(router: DependencyContainer.networkRouter, producer: producer)
+    imageLoader = ImageLoader(producer: producer)
   }
   
   var body: some View {
-    Image(uiImage: (photoLoader.data.count == 0) ? UIImage() : UIImage(data: photoLoader.data)! )
+    Image(uiImage: imageLoader.image)
       .resizable()
       .foregroundColor(.gray)
       .clipShape(Circle())

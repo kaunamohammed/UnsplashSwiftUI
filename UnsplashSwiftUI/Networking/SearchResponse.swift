@@ -19,3 +19,11 @@ struct SearchResponse<T: Decodable>: Decodable {
     case results
   }
 }
+
+struct GlobalConstants {
+  
+  struct Unsplash {
+    static let apiKey = "Your Unsplash API Key"
+  }
+  
+}
