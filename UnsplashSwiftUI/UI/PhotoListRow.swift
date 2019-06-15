@@ -34,7 +34,7 @@ struct PhotoListRow : View {
           Text(photoViewModel.totalLikes.stringValue)
             .font(.subheadline)
             .bold()
-            .color(random ? .red : .black)
+            .color(isHearted ? .red : .black)
         }
         Text(photoViewModel.relativeDate)
           .font(.footnote)
