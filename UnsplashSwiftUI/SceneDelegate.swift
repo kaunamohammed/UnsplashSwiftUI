@@ -17,7 +17,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
     let window = UIWindow(frame: UIScreen.main.bounds)
-    window.rootViewController = UIHostingController(rootView: HomeView(photoListViewModel: PhotoListViewModel(router: Router()), userListViewModel: UserListViewModel(router: Router())))
+    let router =  Router()
+    window.rootViewController = UIHostingController(rootView: HomeView(photoListViewModel: PhotoListViewModel(router: router),
+                                                                       userListViewModel: UserListViewModel(router: router)))
+
+    
+    //window.rootViewController = UIHostingController(rootView: NewHeartButton()
+    
     self.window = window
     window.makeKeyAndVisible()
   }

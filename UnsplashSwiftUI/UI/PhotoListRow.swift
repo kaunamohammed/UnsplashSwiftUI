@@ -10,32 +10,31 @@ import SwiftUI
 
 struct PhotoListRow : View {
   
+  @State var isHearted: Bool = false
+
   public var photoViewModel: PhotoViewModel
   
   private let random = Bool.random()
   
   var body: some View {
-    VStack(alignment: .leading) {
+    VStack(alignment: .leading) { 
       HStack {
-        ProfileImageView(producer: UnsplashImage(url: photoViewModel.profileImageURL))
+        ProfileImageView(url: photoViewModel.profileImageURL)
         Text(photoViewModel.firstname + " " + photoViewModel.lastname)
           .font(.headline)
           .bold()
           .color(.black)
       }
       Spacer()
-      PhotoImageView(producer: UnsplashImage(url: photoViewModel.regularImageURL))
+      PhotoImageView(url: photoViewModel.regularImageURL)
       Spacer()
       VStack(alignment: .leading) {
         HStack {
-        Image(systemName: random ? "heart.fill" : "heart")
-          .resizable()
-          .frame(width: 25, height: 25)
-          .foregroundColor(random ? .red : .black)
-        Text(photoViewModel.totalLikes.stringValue)
-          .font(.subheadline)
-          .bold()
-          .color(random ? .red : .black)
+          HeartButton(isHearted: $isHearted)
+          Text(photoViewModel.totalLikes.stringValue)
+            .font(.subheadline)
+            .bold()
+            .color(random ? .red : .black)
         }
         Text(photoViewModel.relativeDate)
           .font(.footnote)
@@ -45,6 +44,17 @@ struct PhotoListRow : View {
     }
   }
 }
+
+#if DEBUG
+struct PhotoListRow_Previews : PreviewProvider {
+  
+  static var previews: some View {
+    PhotoListRow(photoViewModel: PhotoViewModel(photo: photo,
+                                                formatter: .init()))
+  }
+}
+#endif
+
 
 struct UnsplashImage: URLProducer {
   
@@ -65,3 +75,24 @@ extension Optional where Wrapped == String {
   }
   
 }
+
+let url = "https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjI2MTM1fQ"
+let photo = Photo(id: UUID().uuidString,
+                  createdAt: Date(),
+                  updatedAt: Date(),
+                  width: 0,
+                  height: 0,
+                  color: nil,
+                  altDescription: nil,
+                  urls: Urls(raw: URL(string: url)!,
+                             full: URL(string: url)!,
+                             regular: URL(string: url)!,
+                             small: URL(string: url)!,
+                             thumb: ""),
+                  links: nil,
+                  sponsored: false,
+                  sponsoredBy: nil, sponsoredImpressionsID: nil,
+                  likes: 0,
+                  likedByUser: false,
+                  user: nil,
+                  sponsorship: nil)

@@ -22,7 +22,7 @@ struct UserView : View {
           HStack {
             ForEach(self.userListViewModel.users) { user in
               VStack {
-                UserImageView(producer: UnsplashImage(url: user.regularImageURL))
+                UserImageView(url: user.regularImageURL)
                 Text(user.firstname)
                   .font(.subheadline)
                   .bold()
@@ -33,7 +33,10 @@ struct UserView : View {
             }
           }
         }
-        }.frame(height: 150).padding(.leading, -20).padding(.trailing, -20)
+        }
+        .frame(height: 150)
+        .padding(.leading, -20)
+        .padding(.trailing, -20)
     }
   }
   

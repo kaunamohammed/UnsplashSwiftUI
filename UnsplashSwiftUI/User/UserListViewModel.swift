@@ -27,7 +27,7 @@ public class UserListViewModel: BindableObject {
   
   private func getUsers() {
     
-    router.request(UsersEndPoint.getUsers(matching: "s",
+    router.request(UsersEndPoint.getUsers(matching: "a",
                                           page: 1,
                                           numberPerPage: 20),
                    completion: { result in

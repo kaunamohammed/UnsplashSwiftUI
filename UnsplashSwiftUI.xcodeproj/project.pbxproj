@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC15F61E22B472900082F0A4 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC15F61D22B472900082F0A4 /* HeartButton.swift */; };
 		FC2A867A22B1300800120498 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A867922B1300800120498 /* AppDelegate.swift */; };
 		FC2A867C22B1300800120498 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A867B22B1300800120498 /* SceneDelegate.swift */; };
 		FC2A868022B1301700120498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2A867F22B1301700120498 /* Assets.xcassets */; };
@@ -28,12 +29,15 @@
 		FC352E0522B19D6000B924CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352E0422B19D6000B924CD /* HomeView.swift */; };
 		FC352E0922B19F4400B924CD /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352E0822B19F4400B924CD /* PhotoListViewModel.swift */; };
 		FC352E0D22B1A1A200B924CD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC352E0C22B1A1A200B924CD /* Photo.swift */; };
+		FC8D6D5B22B297CD002712B7 /* ProfilemageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8D6D5A22B297CD002712B7 /* ProfilemageView.swift */; };
+		FC8D6D5D22B2989D002712B7 /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8D6D5C22B2989D002712B7 /* UserImageView.swift */; };
 		FCE941EF22B1B9090070112B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE941EE22B1B9090070112B /* UserView.swift */; };
 		FCE941F122B1B9C60070112B /* PhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE941F022B1B9C50070112B /* PhotoListView.swift */; };
 		FCE941F322B269E30070112B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE941F222B269E30070112B /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC15F61D22B472900082F0A4 /* HeartButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		FC2A867622B1300800120498 /* UnsplashSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2A867922B1300800120498 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC2A867B22B1300800120498 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		FC352E0422B19D6000B924CD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FC352E0822B19F4400B924CD /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
 		FC352E0C22B1A1A200B924CD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		FC8D6D5A22B297CD002712B7 /* ProfilemageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilemageView.swift; sourceTree = "<group>"; };
+		FC8D6D5C22B2989D002712B7 /* UserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
 		FCE941EE22B1B9090070112B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		FCE941F022B1B9C50070112B /* PhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListView.swift; sourceTree = "<group>"; };
 		FCE941F222B269E30070112B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -73,6 +79,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC15F61C22B472150082F0A4 /* ReusableUI */ = {
+			isa = PBXGroup;
+			children = (
+				FC2A86A922B1423700120498 /* PhotoImageView.swift */,
+				FC8D6D5A22B297CD002712B7 /* ProfilemageView.swift */,
+				FC8D6D5C22B2989D002712B7 /* UserImageView.swift */,
+				FC15F61D22B472900082F0A4 /* HeartButton.swift */,
+			);
+			path = ReusableUI;
+			sourceTree = "<group>";
+		};
 		FC2A866D22B1300700120498 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +112,7 @@
 				FC2A867922B1300800120498 /* AppDelegate.swift */,
 				FC2A867B22B1300800120498 /* SceneDelegate.swift */,
 				FC352E0622B19D9A00B924CD /* UI */,
+				FC15F61C22B472150082F0A4 /* ReusableUI */,
 				FC352DF722B18C9000B924CD /* User */,
 				FC2A868D22B1310300120498 /* Photo */,
 				FC2A869222B1310400120498 /* Networking */,
@@ -127,12 +145,12 @@
 		FC2A869222B1310400120498 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				FC352E0222B19D2500B924CD /* SearchResponse.swift */,
 				FC2A869622B1310400120498 /* RESTComponent.swift */,
 				FC2A869722B1310400120498 /* URLProducer.swift */,
 				FCE941F222B269E30070112B /* ImageLoader.swift */,
 				FC2A869522B1310400120498 /* EndPoint */,
 				FC2A869922B1310400120498 /* Service */,
-				FC352E0222B19D2500B924CD /* SearchResponse.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -170,9 +188,8 @@
 			children = (
 				FC352E0422B19D6000B924CD /* HomeView.swift */,
 				FCE941EE22B1B9090070112B /* UserView.swift */,
-				FCE941F022B1B9C50070112B /* PhotoListView.swift */,
-				FC2A86A922B1423700120498 /* PhotoImageView.swift */,
 				FC2A868F22B1310300120498 /* PhotoListRow.swift */,
+				FCE941F022B1B9C50070112B /* PhotoListView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -256,6 +273,7 @@
 				FC2A869D22B1310400120498 /* PhotoListRow.swift in Sources */,
 				FC2A86A322B1310400120498 /* UnsplashPhotosEndPoint.swift in Sources */,
 				FCE941EF22B1B9090070112B /* UserView.swift in Sources */,
+				FC8D6D5B22B297CD002712B7 /* ProfilemageView.swift in Sources */,
 				FC352DFD22B190C300B924CD /* UserListViewModel.swift in Sources */,
 				FC2A86A422B1310400120498 /* NetworkRouter.swift in Sources */,
 				FC352DF922B18DD100B924CD /* User.swift in Sources */,
@@ -264,8 +282,10 @@
 				FC352DFB22B18FD200B924CD /* UserViewModel.swift in Sources */,
 				FC2A869F22B1310400120498 /* PhotoViewModel.swift in Sources */,
 				FCE941F322B269E30070112B /* ImageLoader.swift in Sources */,
+				FC8D6D5D22B2989D002712B7 /* UserImageView.swift in Sources */,
 				FC2A867C22B1300800120498 /* SceneDelegate.swift in Sources */,
 				FCE941F122B1B9C60070112B /* PhotoListView.swift in Sources */,
+				FC15F61E22B472900082F0A4 /* HeartButton.swift in Sources */,
 				FC352E0922B19F4400B924CD /* PhotoListViewModel.swift in Sources */,
 				FC2A86A522B1310400120498 /* Router.swift in Sources */,
 				FC352E0522B19D6000B924CD /* HomeView.swift in Sources */,

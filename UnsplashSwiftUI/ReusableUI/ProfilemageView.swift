@@ -1,0 +1,28 @@
+//
+//  ProfilemageView.swift
+//  UnsplashSwiftUI
+//
+//  Created by Kauna Mohammed on 13/06/2019.
+//  Copyright © 2019 Kauna Mohammed. All rights reserved.
+//
+
+import Combine
+import SwiftUI
+
+struct ProfileImageView : View {
+  
+  @ObjectBinding var imageLoader: ImageLoader = .init()
+  
+  private let url: URL?
+  init(url: URL?) {
+    self.url = url
+  }
+  
+  var body: some View {
+    Image(uiImage: imageLoader.image)
+      .resizable()
+      .clipShape(Circle())
+      .frame(width: 40, height: 40)
+      .onAppear(perform: { self.imageLoader.createImage(self.url) })
+  }
+}

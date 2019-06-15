@@ -23,7 +23,7 @@ struct SearchResponse<T: Decodable>: Decodable {
 struct GlobalConstants {
   
   struct Unsplash {
-    static let apiKey = "Your Unsplash API Key"
+    static let apiKey = "Your API Key"
   }
   
 }

@@ -9,7 +9,7 @@
 import SwiftUI
 
 public class UserViewModel: Identifiable {
-  
+    
   public var id: String {
     return user.id 
   }

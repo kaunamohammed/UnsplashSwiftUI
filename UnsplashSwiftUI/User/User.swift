@@ -6,8 +6,6 @@
 //  Copyright © 2019 Kauna Mohammed. All rights reserved.
 //
 
-import Foundation
-
 // MARK: - User
 struct User: Decodable {
   let id: String

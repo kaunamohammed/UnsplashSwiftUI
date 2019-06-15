@@ -18,7 +18,7 @@ public class PhotoListViewModel: BindableObject {
       didChange.send(self)
     }
   }
-  
+  private let formatter = RelativeDateTimeFormatter()
   private let router: NetworkRouter
   init(router: NetworkRouter) {
     self.router = router
@@ -29,7 +29,7 @@ public class PhotoListViewModel: BindableObject {
     
     router.request(UnsplashPhotosEndPoint.getPhotos(page: 1,
                                                     numberPerPage: 50,
-                                                    orderedBy: .popular),
+                                                    orderedBy: .latest),
                    completion: { result in
                     
                     switch result {
@@ -39,8 +39,8 @@ public class PhotoListViewModel: BindableObject {
                       do {
                         
                         let photos: [Photo] = try data.decoded()
-                        
-                        self.photos = photos.map(PhotoViewModel.init)
+                        let sortedByDate = photos.sorted { $0.createdAt > $1.createdAt }
+                        self.photos = sortedByDate.map { PhotoViewModel(photo: $0, formatter: self.formatter) }
                       } catch let error {
                         print("error: \(error)")
                       }

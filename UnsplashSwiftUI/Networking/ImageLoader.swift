@@ -11,30 +11,29 @@ import Combine
 import SwiftUI
 import ImageIO
 
+
 public class ImageLoader: BindableObject {
   
-  public let didChange = PassthroughSubject<ImageLoader, Never>()
-  
-  var image = UIImage() {
+  public let didChange = PassthroughSubject<UIImage, Never>()
+    
+  var image: UIImage = .init() {
     didSet {
-      didChange.send(self)
+      didChange.send(image)
     }
   }
+
+}
+
+extension ImageLoader {
   
-  init(producer: URLProducer) {
-    createImage(from: producer.url)
+  public func createImage(_ input: URL?) {
+    guard let source = input else { return }
+    let options: [CFString: Any] = [ kCGImageSourceShouldCacheImmediately: true ]
+    guard let imageSource = CGImageSourceCreateWithURL(source as CFURL , nil),
+      let cgImage = CGImageSourceCreateImageAtIndex(imageSource, 0, options as CFDictionary) else { return }
+    let image = UIImage(cgImage: cgImage)
+    self.image = image
+    
   }
   
-  private func createImage(from source: URL?) {
-    let options: [CFString: Any] = [
-      kCGImageSourceShouldCacheImmediately: true,
-    ]
-    DispatchQueue.global(qos: .userInteractive).async {
-      guard let imageSource = CGImageSourceCreateWithURL(source! as CFURL , nil),
-        let image = CGImageSourceCreateImageAtIndex(imageSource, 0, options as CFDictionary) else { return }
-      DispatchQueue.main.async {
-        self.image = UIImage(cgImage: image)
-      }
-    }
-  }
 }

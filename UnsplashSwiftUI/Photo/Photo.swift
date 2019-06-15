@@ -11,7 +11,7 @@ import Foundation
 // MARK: - Photo
 struct Photo: Decodable {
   let id: String
-  let createdAt, updatedAt: String
+  let createdAt, updatedAt: Date
   let width, height: Int
   let color : String?
   let altDescription: String?
@@ -54,7 +54,7 @@ struct Links: Decodable {
 // MARK: - SponsoredBy
 struct SponsoredBy: Decodable {
   let id: String?
-  let updatedAt: String?
+  let updatedAt: Date?
   let username: String?
   let name: String?
   let firstName: String?
@@ -126,6 +126,7 @@ extension Data {
   
   public func decoded<T: Decodable>(decoder: JSONDecoder = .init()) throws -> T {
     decoder.keyDecodingStrategy = .convertFromSnakeCase
+    decoder.dateDecodingStrategy = .iso8601
     return try decoder.decode(T.self, from: self)
   }
   
