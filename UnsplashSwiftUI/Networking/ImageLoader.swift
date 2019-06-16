@@ -11,7 +11,6 @@ import Combine
 import SwiftUI
 import ImageIO
 
-
 public class ImageLoader: BindableObject {
   
   public let didChange = PassthroughSubject<UIImage, Never>()

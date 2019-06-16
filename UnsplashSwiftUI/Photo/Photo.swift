@@ -6,7 +6,7 @@
 //  Copyright © 2019 Kauna Mohammed. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
 // MARK: - Photo
 struct Photo: Decodable {

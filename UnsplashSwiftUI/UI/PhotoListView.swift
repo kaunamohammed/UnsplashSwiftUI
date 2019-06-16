@@ -14,13 +14,18 @@ struct PhotoListView : View {
   
   var body: some View {
     VStack(alignment: .leading) {
-      Text("From the community")
-        .font(.headline)
-        .bold()
-      ForEach(self.photoListViewModel.photos) { photoViewModel in
+      List(self.photoListViewModel.photos) { photoViewModel in
         PhotoListRow(photoViewModel: photoViewModel)
       }
-      }.padding(.leading, -10).padding(.trailing, -10)
-  }  
+    }
+  }
 }
 
+#if DEBUG
+struct PhotoListView_Previews : PreviewProvider {
+  
+  static var previews: some View {
+    PhotoListView(photoListViewModel: PhotoListViewModel(router: Router()))
+  }
+}
+#endif

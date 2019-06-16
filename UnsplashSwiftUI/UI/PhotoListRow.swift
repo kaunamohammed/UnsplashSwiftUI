@@ -10,14 +10,16 @@ import SwiftUI
 
 struct PhotoListRow : View {
   
-  @State var isHearted: Bool = false
-
+  //@State var isHearted: Bool = false
+  
+  var isHearted: Bool = Bool.random()
+  
   public var photoViewModel: PhotoViewModel
   
   private let random = Bool.random()
   
   var body: some View {
-    VStack(alignment: .leading) { 
+    VStack(alignment: .leading) {
       HStack {
         ProfileImageView(url: photoViewModel.profileImageURL)
         Text(photoViewModel.firstname + " " + photoViewModel.lastname)
@@ -30,7 +32,7 @@ struct PhotoListRow : View {
       Spacer()
       VStack(alignment: .leading) {
         HStack {
-          HeartButton(isHearted: $isHearted)
+          HeartButton(isHearted: isHearted)
           Text(photoViewModel.totalLikes.stringValue)
             .font(.subheadline)
             .bold()
@@ -49,8 +51,10 @@ struct PhotoListRow : View {
 struct PhotoListRow_Previews : PreviewProvider {
   
   static var previews: some View {
-    PhotoListRow(photoViewModel: PhotoViewModel(photo: photo,
-                                                formatter: .init()))
+    List(0..<5) { _ in
+      PhotoListRow(photoViewModel: PhotoViewModel(photo: photo,
+                                                  formatter: .init()))
+    }
   }
 }
 #endif

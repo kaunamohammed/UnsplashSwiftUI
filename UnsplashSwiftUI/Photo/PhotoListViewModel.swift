@@ -40,6 +40,7 @@ public class PhotoListViewModel: BindableObject {
                         
                         let photos: [Photo] = try data.decoded()
                         let sortedByDate = photos.sorted { $0.createdAt > $1.createdAt }
+
                         self.photos = sortedByDate.map { PhotoViewModel(photo: $0, formatter: self.formatter) }
                       } catch let error {
                         print("error: \(error)")

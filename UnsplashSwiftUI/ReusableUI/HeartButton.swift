@@ -11,7 +11,7 @@ import Combine
 
 struct HeartButton : View {
   
-  @Binding var isHearted: Bool
+  @State var isHearted: Bool
   
   var body: some View {
     Button(action: { self.isHearted.toggle() }, label: {
@@ -24,23 +24,11 @@ struct HeartButton : View {
   
 }
 
-struct HeartView : View {
-
-  @State var isHearted: Bool = false
-
-  var body: some View {
-
-    HeartButton(isHearted: $isHearted)
-
-  }
-  
-}
-
 #if DEBUG
 struct HeartView_Previews : PreviewProvider {
   
   static var previews: some View {
-    HeartView(isHearted: false)
+      HeartButton(isHearted: false)
   }
 }
 #endif

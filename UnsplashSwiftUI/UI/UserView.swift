@@ -38,6 +38,7 @@ struct UserView : View {
         .padding(.leading, -20)
         .padding(.trailing, -20)
     }
+    .padding()
   }
   
 }

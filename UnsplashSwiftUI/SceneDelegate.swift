@@ -18,12 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     let window = UIWindow(frame: UIScreen.main.bounds)
     let router =  Router()
-    window.rootViewController = UIHostingController(rootView: HomeView(photoListViewModel: PhotoListViewModel(router: router),
-                                                                       userListViewModel: UserListViewModel(router: router)))
+    window.rootViewController = UIHostingController(rootView: HomeView(photoListViewModel: PhotoListViewModel(router: router)))
 
-    
-    //window.rootViewController = UIHostingController(rootView: NewHeartButton()
-    
     self.window = window
     window.makeKeyAndVisible()
   }

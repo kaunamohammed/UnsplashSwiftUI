@@ -11,15 +11,22 @@ import SwiftUI
 struct HomeView : View {
   
   @ObjectBinding var photoListViewModel: PhotoListViewModel
-  @ObjectBinding var userListViewModel: UserListViewModel
   
   var body: some View {
     NavigationView {
-      List {
-        UserView(userListViewModel: userListViewModel)
-        PhotoListView(photoListViewModel: photoListViewModel)
-        }.navigationBarTitle(Text("Good Afternoon"))
+      PhotoListView(photoListViewModel: photoListViewModel)
+        .navigationBarTitle(Text("Photos"))
     }
   }
 }
 
+#if DEBUG
+struct HomeView_Previews : PreviewProvider {
+  
+  static var previews: some View {
+    HomeView(
+      photoListViewModel: PhotoListViewModel(router: Router())
+    )
+  }
+}
+#endif
