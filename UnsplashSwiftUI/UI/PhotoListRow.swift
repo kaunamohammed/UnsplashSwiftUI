@@ -10,14 +10,10 @@ import SwiftUI
 
 struct PhotoListRow : View {
   
-  //@State var isHearted: Bool = false
-  
   var isHearted: Bool = Bool.random()
   
   public var photoViewModel: PhotoViewModel
-  
-  private let random = Bool.random()
-  
+    
   var body: some View {
     VStack(alignment: .leading) {
       HStack {

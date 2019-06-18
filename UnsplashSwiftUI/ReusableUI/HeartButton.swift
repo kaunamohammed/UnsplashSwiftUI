@@ -11,15 +11,13 @@ import Combine
 
 struct HeartButton : View {
   
-  @State var isHearted: Bool
+  var isHearted: Bool
   
   var body: some View {
-    Button(action: { self.isHearted.toggle() }, label: {
       Image(systemName: isHearted ? "heart.fill" : "heart")
         .resizable()
-        .foregroundColor( isHearted ? .red : .black)
+        .foregroundColor(isHearted ? .red : .black)
         .frame(width: 25, height: 25)
-    })
   }
   
 }
@@ -28,7 +26,7 @@ struct HeartButton : View {
 struct HeartView_Previews : PreviewProvider {
   
   static var previews: some View {
-      HeartButton(isHearted: false)
+      HeartButton(isHearted: true)
   }
 }
 #endif
